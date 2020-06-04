@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signature Validation System</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body >
+<div  class= "home" style="height: auto" id="home">	
+		<header>Signature Validation system
+		<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#home">Home</a>
+  <a href="#verify">Verify</a>
+  <a href="#about">About</a>
+  
+</div>
+
+
+<span style="font-size:30px;cursor:pointer; float:right" onclick="openNav()">&#9776;</span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script></header>
+
+		<p><i>System provides automated signature verification software that protects against fraud and reduces costs.<br>
+			Since all signatures are unique, they are relied upon for verification by financial organizations, businesses and governments to <br>authorize transactions and documents.<br>
+			Software verifies signatures on both print documents , check processing, loan origination, vote-by-mail, legal documents and <br>much more. Accurate signature verification is crucial since forgery and fraud can cost organizations money, time and their <br>reputation.</i> <br>
+			<button class="button5">Verify</button>
+		</p>	
+</div>
+<div class ="verify" style="height: auto" id ="verify1">
+	<div class ="container">
+		<form action = "/file_upload_form" method = "post" enctype="multipart/form-data">
+			<label>Signature Id</label>
+			<input type="text" name="id" placeholder="Enter Id.."><br>
+			<label>Signature</label>
+			<input type="file" name="file"><br>
+			<input type="submit" value="Verify">
+
+		</form>
+		<h4>The selected image is {{result}}</h4>
+	</div>
+
+</div>
+<div class ="about" style="height: auto;" id= "about">
+	<div class="container2">	
+		<div id = "leftbox">
+			<img src="/static/images/icon.png" alt="Avatar"><h2>Highly Effective</h2>
+ 			Detects characteristics of a signature that are indistinguishable to the human eye for high fraud detection accuracy rates. Analyzes typical signature features such as comparison of geometric shapes, fragments, and trajectories.  When used for online verification, it analyzes pressure, speed and tension. Multiple software engines work together to produce reliable verification output.
+		</div>
+		<div id = "middlebox">
+			<img src="/static/images/icon2.png" alt="Avatar">
+			<h2>Fast, Accurate, Works 24/7</h2>
+			Human verification is limited by shortcomings that include level of expertise, fatigue, mood and working conditions. People can experience diminished accuracy over time, making more mistakes at the end of a day or shift than at the beginning. Automated signature verification can verify much faster, work 24/7 and produce consistent results at a much lower cost.
+		</div>	
+		<div id = "leftbox2">
+			<img src="/static/images/icon4.png" alt="Avatar"><h2>Print and Online</h2>
+			Automated signature verification works for signatures collected from scanned documents and those captured online on pads, tablets, smartphones and terminals.
+		</div>
+		<div id = "middlebox2">
+			<img src="/static/images/icon3.png" alt="Avatar">
+			<h2>Cost Effective</h2>
+			Perform signature verification on all checks, regardless of amount, without limitations due to cost; or on any other application regardless of volume.  With high accuracy rates and adjustable thresholds, only questionable signatures are routed for human verification.  This enables organizations to allow more time to analyze for potential fraud or to assess more signatures for verification, while they improve the overall accuracy of the verification process.
+		</div>	
+	</div>
+</div>	
+
+
+<div class ="abc">
+
+	<h4>Contact Us at compsdsp@gmail.com<br><br>
+	2020 Copyright &copy Theem COE</h4>	<br>
+	<a href="#" class="fa fa-facebook"></a>
+	<a href="#" class="fa fa-twitter"></a>
+	<a href="#" class="fa fa-google"></a>
+	<a href="#" class="fa fa-linkedin"></a>
+</div>
+</body>
+</html>
